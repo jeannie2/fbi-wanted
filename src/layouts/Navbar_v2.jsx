@@ -80,7 +80,13 @@ function LayoutsNavbar() {
           <NavLink to="/wanted/additional" className="block mt-4 lg:inline-block lg:mt-0 text-black-200 mr-4">
             Additional violent crimes
           </NavLink>
-          <button type="button" onClick={() => navigate('search')} className="float-right absolute bg-blue-500 hover:bg-blue-700 text-white font-bold block mt-4 lg:inline-block lg:mt-0 text-black-200 mr-4 border border-blue-700 rounded"><i className="fa fa-search" /> Search</button>
+        </div>
+        <div>
+          <div className="wrapper">
+            <input type="text" onChange={handleFilterSubmit} id="search-navbar" className="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search..." />
+            <button type="submit" onClick={() => navigate('/index/cei')} className="float-right absolute"><i className="fa fa-search" />ER</button>
+            <Link to="/show/:id">Click Me</Link>
+          </div>
         </div>
       </div>
     </nav>

@@ -29,3 +29,6 @@ By default, a `API_URL` is added that is set to `http://localhost:3000` in devel
 
 - Click on your `>_ Repo-Name -> Variables -> New Variable`, Add the following variables
   - `API_URL` -> `https://api.domain.com`
+
+// References:
+https://dev.to/salehmubashar/search-bar-in-react-js-545l

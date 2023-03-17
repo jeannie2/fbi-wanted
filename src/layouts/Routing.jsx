@@ -7,9 +7,10 @@ import PagesHome from '@/pages/Home'
 import PagesAnother from '@/pages/Another'
 import PagesNotFound from '@/pages/NotFound'
 
-import PagesIndex from '@/pages/Index'
+import PagesIndex from '@/pages/wanted/Index'
 import PagesShow from '@/pages/Show'
-import PagesTopTen from '@/pages/TopTen'
+import PagesTopTen from '@/pages/wanted/topten/Index'
+import PagesSearch from '@/pages/Search'
 /*
 import PagesCyber from '@/pages/Cyber'
 import PagesCounterintelligence from '@/pages/Counterintelligence'
@@ -27,8 +28,9 @@ function Routing() {
         <Route path="/" element={<App />}>
           <Route index element={<PagesHome />} />
           <Route path="/another" element={<PagesAnother />} />
-          <Route path="/topten" element={<PagesTopTen />} />
-          <Route path="/index/:subject" element={<PagesIndex />} />
+          <Route path="/wanted/topten" element={<PagesTopTen />} />
+          <Route path="/search" element={<PagesSearch />} />
+          <Route path="/wanted/:subject" element={<PagesIndex />} />
           <Route path="/show/:uid" element={<PagesShow />} />
           <Route path="*" element={<PagesNotFound />} />
 

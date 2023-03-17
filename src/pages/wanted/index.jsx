@@ -1,72 +1,78 @@
 import React from 'react'
-// import { useNavigate } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
-// import useTodos from '@/hooks/useTodos'
-// import Loading from '@/components/Loading'
-import * as criminals from '@/criminals.json'
+// import * as topTen from '@/topTen.json'
+// import useTopTen from '@/hooks/useTopTen'
+import useCriminals from '@/hooks/useCriminals'
+// import useKidnapMissing from '@/hooks/useKidnapMissing'
+// CHETANBHAI, ruja, ROSALES, YULAN,alexis, CARDENAS, arnoldo, pratt, VILLARREAL, CARO-QUINTERO
+import CompToRender from '@/components/CompToRender'
 
-function PagesJson() {
-  const what = criminals
-
-  return (
-    <p>{what.items[0].title}</p>
-  )
+const keyToSubject = {
+  cyber: "Cyber's Most Wanted",
+  kidnapmissing: 'Kidnappings and Missing Persons',
+  counterintelligence: 'Counterintelligence',
+  seekinginfo: 'Seeking Information',
+  additional: 'Additional Violent Crimes',
+  cei: 'Criminal Enterprise Investigations'
+// "vicap", "ViCAP",
+// "topten", "Top T"
 }
 
-export default PagesJson
+function PagesIndex() {
+  const { subject } = useParams()
 
-function PagesWantedIndexO() {
-  const navigate = useNavigate()
-  const { data, error, isLoading } = useTodos()
+  const data = useCriminals(keyToSubject[subject])
+  /* if (subject === 'topten') {
+    data = useTopTen(keyToSubject[subject])
+  } */
+  // const data = useCriminals("Cyber's Most Wanted"])
 
-  if (isLoading) return <Loading />
-  if (error) return <div>There was an error fetching data</div>
+  console.log('IN THE INDEX')
 
-  /// console.log(criminals)
-  return (
+  return <CompToRender data={data} /> // same comp regardless
+  // const CompTo
+  //  const data = useKidnapMissing()
 
-    <div id="pages-wanted-index" className="container">
-      <h1 className="text-center">Todos</h1>
+  // const PagesIndex = () => {
+  /* return (
+    <section className="overflow-hidden text-neutral-700">
+      <div className="container mx-auto px-5 py-2 lg:px-32 lg:pt-12">
+        <div className="-m-1 flex flex-wrap md:-m-2">
 
-      {
-        data?.todos?.length === 0 ? (
-          <div className="text-center">
-            <p>No todos found</p>
-          </div>
-        ) : (
-          <table className="table table-hover">
-            <thead>
-              <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Title</th>
-                <th scope="col">Created At</th>
-              </tr>
-            </thead>
-            <tbody>
-              {
-                data?.todos?.map((todo) => (
-                  (
-                    <tr key={todo.title} onClick={() => navigate(`/wanted/${todo.title}`)} style={{ cursor: 'pointer' }}>
-                      <th scope="row">{todo.title}</th>
-
-                    </tr>
-                  )
-                ))
-              }
-            </tbody>
-          </table>
-        )
-      }
-    </div>
-  )
+          {data.map((criminal) => (
+            <div className="flex w-1/4 flex-wrap">
+              <div className="w-full p-1 md:p-2">
+                <img
+                  alt="gallery"
+                  className="block h-full w-full rounded-lg object-cover object-center"
+                  src={criminal.images[0].thumb}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  ) */
 }
 
-// export default PagesWantedIndex
+export default PagesIndex
 
-/*  data?.todos?.map((todo) => (
-                  <tr key={todo.id} onClick={() => navigate(`/wanted/${todo.id}`)} style={{ cursor: 'pointer' }}>
-                    <th scope="row">{todo.id}</th>
-                    <td>{todo.title}</td>
-                    <td>{todo.createdAt}</td>
-                  </tr>
-                )) */
+/*
+    <p>{data[0].title}</p>
+
+  <>
+      <p>{data}</p>
+     {getCyber().map((criminal) => (
+         <td>{criminal.title}</td>
+      )})
+
+    </>
+
+  criminals.items.map((criminal) => (
+      <tr key={criminal.title}>
+        <td>{criminal.title}</td>
+      </tr>
+    )) */
+//  <p>{criminals.items[0].title}</p> */

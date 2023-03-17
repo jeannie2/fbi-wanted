@@ -6,6 +6,7 @@ import CompToRender2 from '@/components/CompToRender2'
 
 function PagesShow() {
   const { uid } = useParams()
+  // const data = useCriminal(uid)
   const data = useCriminal(uid)
   //   const data = useCriminals(keyToSubject[subject])
   // const data = useCriminals("Cyber's Most Wanted"])
