@@ -28,8 +28,8 @@ function PagesJson() {
   const data = useCriminals()
 
   return (
-
-    <section className="overflow-hidden text-neutral-700">
+    <p>{data}</p>
+  /*  <section className="overflow-hidden text-neutral-700">
       <div className="container mx-auto px-5 py-2 lg:px-32 lg:pt-12">
         <div className="-m-1 flex flex-wrap md:-m-2">
 
@@ -46,7 +46,7 @@ function PagesJson() {
           ))}
         </div>
       </div>
-    </section>
+    </section> */
 
   /*
 
