@@ -37,14 +37,14 @@ function LayoutsNavbar() {
           className="flex items-center px-3 py-2 rounded text-black-500 hover:text-black-400"
         >
           <svg
-            className={`fill-current h-3 w-3 ${isOpen ? 'hidden' : 'block'}`}
+            className={`fill-current h-5 w-5 ${isOpen ? 'hidden' : 'block'}`}
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
           </svg>
           <svg
-            className={`fill-current h-3 w-3 ${isOpen ? 'block' : 'hidden'}`}
+            className={`fill-current h-5 w-5 ${isOpen ? 'block' : 'hidden'}`}
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -83,7 +83,7 @@ function LayoutsNavbar() {
           <NavLink to="/wanted/additional" className="block mt-4 lg:inline-block lg:mt-0 text-black-200 mr-4">
             Additional violent crimes
           </NavLink>
-          <button type="button" onClick={() => navigate('search')} className="float-right absolute bg-blue-500 hover:bg-blue-700 text-white font-bold block mt-4 lg:inline-block lg:mt-0 text-black-200 mr-4 border border-blue-700 rounded"><i className="fa fa-search" /> Search</button>
+          <button type="button" onClick={() => navigate('search')} className="float-right absolute bg-blue-500 hover:bg-blue-700 text-white font-bold block mt-4 lg:inline-block lg:mt-0 text-black-200 mr-4 px-1 border border-blue-700 rounded"><i className="fa fa-search" /> Search</button>
           {
               data?.user ? (
                 <>

@@ -8,10 +8,10 @@ function PagesAuthSignup() {
   const { apiSignup } = useAuth()
 
   return (
-    <div id="pages-auth-signup" className="container">
-      <div className="row">
-        <div className="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-          <h1 className="text-center">Signup</h1>
+    <div id="pages-auth-signup" className="container text-white flex items-center justify-center h-screen -mt-20">
+      <div>
+        <div className="text-center">
+          <h1 id="register-text" className="text-center text-5xl mb-5">STAFF ONLINE REGISTRATION</h1>
 
           <FormsAuthSignup
             onSubmit={apiSignup}

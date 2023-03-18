@@ -27,8 +27,8 @@ function List(props) {
 
           {filteredData.map((item) => ( // vs data.data.map in CompToRender.jsx
             //   {data.data.map((criminal) => (
-            <div key={item.uid} className="flex w-1/4 flex-wrap">
-              <div className="w-full p-1 md:p-2">
+            <div key={item.uid} className="flex w-2/4 md:w-1/3 lg:w-1/4 flex-wrap">
+              <div className="w-full p-1 mb-16 lg:mb-9 md:p-2">
                 <img
                   alt="gallery"
                   data-id={item.uid}
@@ -36,7 +36,7 @@ function List(props) {
                   className="block h-full w-full rounded-lg object-cover object-center"
                   src={item.images[0].thumb}
                 />
-                <figcaption>{item.title}</figcaption>
+                <figcaption className="text-center bg-black text-white p-1">{item.title}</figcaption>
               </div>
             </div>
           ))}

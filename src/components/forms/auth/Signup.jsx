@@ -26,9 +26,9 @@ function FormsAuthSignup(props) {
         ({ errors: e, touched: t, isSubmitting }) => (
           <Form>
             <div className="mb-3">
-              <label>Email</label>
+              <label className="px-5">Email</label>
               <Field
-                className={`form-control ${e?.email && t?.email && 'is-invalid'}`}
+                className={`form-control ${e?.email && t?.email && 'is-invalid'} text-black pl-1`}
                 name="email"
                 type="email"
                 placeholder="adam.chan@gmail.com"
@@ -41,9 +41,9 @@ function FormsAuthSignup(props) {
             </div>
 
             <div className="mb-3">
-              <label>Password</label>
+              <label className="px-2">Password</label>
               <Field
-                className={`form-control ${e?.password && t?.password && 'is-invalid'}`}
+                className={`form-control ${e?.password && t?.password && 'is-invalid'} text-black pl-1`}
                 name="password"
                 type="password"
               />
@@ -55,9 +55,9 @@ function FormsAuthSignup(props) {
             </div>
 
             <div className="mb-3">
-              <label>Password Confirmation</label>
+              <label className="px-2">Password Confirmation</label>
               <Field
-                className={`form-control ${e?.passwordConfirmation && t?.passwordConfirmation && 'is-invalid'}`}
+                className={`form-control ${e?.passwordConfirmation && t?.passwordConfirmation && 'is-invalid'} text-black pl-1`}
                 name="passwordConfirmation"
                 type="password"
               />
@@ -68,7 +68,7 @@ function FormsAuthSignup(props) {
               />
             </div>
 
-            <button className="btn btn-primary float-end" type="submit" disabled={isSubmitting}>Submit</button>
+            <button className="hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded" type="submit" disabled={isSubmitting}>Submit</button>
           </Form>
         )
       }
