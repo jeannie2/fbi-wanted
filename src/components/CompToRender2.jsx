@@ -1,36 +1,71 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 // change to card
 // need "key or data-key for first div?"
 // <div className="h-48 lg:h-auto lg:w-5/12 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style={{ backgroundImage: `url(${data.data[0].images[0].thumb})` }} title="Woman holding a mug" />
 function CompToRender2(data) {
+  console.log(data)
   return (
-    <div className="max-w-sm lg:max-w-4xl lg:flex m-auto">
-      <div className="h-48 lg:h-auto lg:w-5/12 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" title="Woman holding a mug">
-        <img className="w-[300px] h-[400px]" src={data.data[0].images[0].thumb} />
+    <div id="CompToRender2" className="max-w-sm lg:max-w-4xl lg:flex m-auto text-cyan-100">
+      <div className="h-48 lg:h-auto lg:w-5/12 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" title="photo">
+        <img className="lg:w-[300px] lg:h-[400px] mt-16 border-cyan-100 border-2" src={data.data[0].images[0].thumb} />
       </div>
 
-      <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+      <div className="p-4 flex flex-col justify-between leading-normal mt-10">
         <div className="mb-8">
-
-          <div className="text-gray-900 font-bold text-xl mb-2">{data.data[0].title}</div>
+          <div className="font-bold text-2xl lg:text-4xl mb-2 typing-text">{data.data[0].title}</div>
           <ul>
-            {data.data[0].dates_of_birth_used !== null ? (<li className="text-gray-700 text-base my-2"><span className="font-bold">DOB: </span> {data.data[0].dates_of_birth_used} </li>) : '' }
-            {data.data[0].place_of_birth !== null ? (<li className="text-gray-700 text-base my-2"><span className="font-bold">Place of birth: </span>{data.data[0].place_of_birth}</li>) : '' }
-            {data.data[0].sex !== null ? (<li className="text-gray-700 text-base my-2"><span className="font-bold">Sex: </span>{data.data[0].sex}</li>) : '' }
-            {data.data[0].race !== null ? (<li className="text-gray-700 text-base my-2"><span className="font-bold">Race: </span>{data.data[0].race}</li>) : '' }
-            {data.data[0].nationality !== null ? (<li className="text-gray-700 text-base my-2"><span className="font-bold">Nationality: </span>{data.data[0].nationality}</li>) : '' }
-            {data.data[0].remarks !== null ? (<li className="text-gray-700 text-base my-2"><span className="font-bold">Remarks: </span>{data.data[0].remarks}</li>) : '' }
-            {data.data[0].details !== null ? (<li className="text-gray-700 text-base my-2"><span className="font-bold">Details: </span>{data.data[0].details}</li>) : '' }
-            {data.data[0].caution !== null ? (<li className="text-gray-700 text-base my-2"><span className="font-bold">Caution: </span>{data.data[0].caution}</li>) : '' }
-            {data.data[0].reward_text !== null ? (<li className="text-gray-700 text-base my-2"><span className="font-bold">Reward: </span>{data.data[0].reward_text}</li>) : '' }
-            <li className="text-gray-700 text-base"><span className="font-bold">Field office: </span> {data.data[0].field_offices} </li>
+            {data.data[0].dates_of_birth_used !== null ? (<li className="my-2 typing-text text-base lg:text-xl"><span className="font-bold">DOB: </span> {data.data[0].dates_of_birth_used} </li>) : '' }
+            {data.data[0].place_of_birth !== null ? (<li className="my-2 typing-text text-base lg:text-xl"><span className="font-bold">POB: </span>{data.data[0].place_of_birth}</li>) : '' }
+            {data.data[0].sex !== null ? (<li className="my-2 typing-text text-base lg:text-xl"><span className="font-bold">Sex: </span>{data.data[0].sex}</li>) : '' }
+            {data.data[0].race !== null ? (<li className="my-2 typing-text text-base lg:text-xl"><span className="font-bold">Race: </span>{data.data[0].race}</li>) : '' }
+            {data.data[0].nationality !== null ? (<li className="my-2 typing-text text-base lg:text-xl"><span className="font-bold">Nationality: </span>{data.data[0].nationality}</li>) : '' }
+            <li className="typing-text text-base lg:text-xl"><span className="font-bold ">Field office: </span> {data.data[0].field_offices} </li>
+
+            {data.data[0].remarks !== null ? (
+              <details className="duration-300">
+                <summary className="bg-inherit px-5 py-3 text-base lg:text-xl cursor-pointer">Remarks</summary>
+                <div className="px-5 py-3 border border-cyan-100 text-base font-light">
+                  <p>{data.data[0].remarks}</p>
+                </div>
+              </details>
+            ) : '' }
+
+            {data.data[0].details !== null ? (
+              <details className="duration-300">
+                <summary className="bg-inherit px-5 py-3 text-base lg:text-xl cursor-pointer">Details</summary>
+                <div className="px-5 py-3 border border-cyan-100 text-base font-light">
+                  <p>{data.data[0].details}</p>
+                </div>
+              </details>
+            ) : '' }
+
+            {data.data[0].caution !== null ? (
+              <details className="duration-300">
+                <summary className="bg-inherit px-5 py-3 text-base lg:text-xl cursor-pointer ">Caution</summary>
+                <div className="px-5 py-3 border border-cyan-100 text-base font-light">
+                  <p>{data.data[0].caution}</p>
+                </div>
+              </details>
+            ) : '' }
+
+            {data.data[0].reward_text !== null ? (
+              <details className="duration-300">
+                <summary className="bg-inherit px-5 py-3 text-base lg:text-xl cursor-pointer ">Reward</summary>
+                <div className="px-5 py-3 border border-cyan-100 text-base font-light">
+                  <p>{data.data[0].reward_text}</p>
+                </div>
+              </details>
+            ) : '' }
+
+            <div className="flex items-center mt-3">
+              <div className="text-sm">
+                <Link to="/create" className="leading-none text-base lg:text-xl">Submit an anonymous tip online</Link>
+              </div>
+            </div>
+
           </ul>
-        </div>
-        <div className="flex items-center">
-          <div className="text-sm">
-            <p className="text-gray-900 leading-none">Submit an anonymous tip online</p>
-          </div>
         </div>
       </div>
     </div>
@@ -38,7 +73,9 @@ function CompToRender2(data) {
 }
 
 export default CompToRender2
-//   <!--<li className="text-gray-700 text-base">Height: {data.data[0].height_min} - {data.data[0].height_max} </li> -->
+
+/* //<p href="" className="leading-none">Submit an anonymous tip online</p>
+ li className="text-gray-700 text-base">Height: {data.data[0].height_min} - {data.data[0].height_max} </li> */
 
 /*
    <li className="text-gray-700 text-base"><span className="font-bold">DOB: </span> {data.data[0].dates_of_birth_used.length === 1 ? data.data[0].dates_of_birth_used : 'NIL' }</li>

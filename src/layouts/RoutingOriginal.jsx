@@ -12,13 +12,6 @@ import PagesShow from '@/pages/Show'
 import PagesTopTen from '@/pages/wanted/topten/Index'
 import PagesSearch from '@/pages/Search'
 
-import NoAuthRoute from '@/layouts/NoAuthRoute'
-import AuthRoute from '@/layouts/AuthRoute'
-
-import PagesAuthLogin from '@/pages/auth/Login'
-import PagesAuthSignup from '@/pages/auth/Signup'
-// import PagesMyTips from '@/pages/my/tips' // same for all logged in users
-
 /*
 import PagesCyber from '@/pages/Cyber'
 import PagesCounterintelligence from '@/pages/Counterintelligence'
@@ -40,9 +33,6 @@ function Routing() {
           <Route path="/search" element={<PagesSearch />} />
           <Route path="/wanted/:subject" element={<PagesIndex />} />
           <Route path="/show/:uid" element={<PagesShow />} />
-
-          <Route path="/auth/login" element={<NoAuthRoute><PagesAuthLogin /></NoAuthRoute>} />
-          <Route path="/auth/signup" element={<NoAuthRoute><PagesAuthSignup /></NoAuthRoute>} />
 
           <Route path="*" element={<PagesNotFound />} />
 

@@ -1,6 +1,6 @@
 import React from 'react'
 // import useCriminals from '@/hooks/useCriminals'
-import useAdditional from '@/hooks/useAdditional'
+import useAdditional from '@/hooks/old/useAdditional'
 
 function PagesAdditional() {
   const data = useAdditional()

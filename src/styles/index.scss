@@ -1,5 +1,39 @@
 // @import "~bootstrap/scss/bootstrap";
-
+//@import "~react-toastify/dist/ReactToastify";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background-color: rgb(4, 4, 35);
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+.typing-text {
+  overflow: hidden;
+  animation: typing 1.3s steps(30, end);
+  white-space:nowrap;
+  animation-fill-mode: forwards;
+  /* border-right: .15em solid orange; */
+}
+
+#CompToRender2 {
+  // font-family: 'Orbitron', sans-serif;
+  // font-family: 'Aldrich', sans-serif;
+  font-family: 'Share Tech Mono', monospace;
+}

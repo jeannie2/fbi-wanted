@@ -6,14 +6,18 @@ import Nav from 'react-bootstrap/Nav'
 import { useNavigate } from 'react-router-dom'
 import { NavLink, Link } from 'react-router-dom'
 
+import useAuth from '@/hooks/useAuth'
+
 // import useUid from '@/hooks/useUid'
 
 function LayoutsNavbar() {
-  // const { data, apiLogout } = useAuth()
+  const { data, apiLogout } = useAuth()
+
   const navigate = useNavigate()
   const [isOpen, setIsOpen] = useState(false)
 
-  const handleFilterSubmit = (e) => {
+  // #111126
+  /* const handleFilterSubmit = (e) => {
     console.log(e.target.value)
     // find uid from name
     // const uid = useUid(e.target.value)
@@ -22,11 +26,10 @@ function LayoutsNavbar() {
     //
     // display 1 result with e.target.value
     //
-  }
+  } */
 
   return (
-    <nav className="flex items-center justify-between flex-wrap p-6 bg-teal-500">
-
+    <nav className="flex items-center justify-between flex-wrap p-6 bg-slate-800 text-white">
       <div className="block lg:hidden">
         <button
           type="button"
@@ -81,6 +84,21 @@ function LayoutsNavbar() {
             Additional violent crimes
           </NavLink>
           <button type="button" onClick={() => navigate('search')} className="float-right absolute bg-blue-500 hover:bg-blue-700 text-white font-bold block mt-4 lg:inline-block lg:mt-0 text-black-200 mr-4 border border-blue-700 rounded"><i className="fa fa-search" /> Search</button>
+          {
+              data?.user ? (
+                <>
+                  <NavLink to="/my/tips" className="block mt-4 lg:inline-block lg:mt-0 text-black-200 mr-4 float-right">My Tips</NavLink>
+                  <NavLink onClick={apiLogout} className="block mt-4 lg:inline-block lg:mt-0 text-black-200 mr-4 float-right">Logout</NavLink>
+                </>
+              ) : (
+                <>
+
+                  <NavLink to="/auth/signup" className="block mt-4 lg:inline-block lg:mt-0 text-black-200 mr-4 float-right">Register</NavLink>
+                  <NavLink to="/auth/login" className="block mt-4 lg:inline-block lg:mt-0 text-black-200 mr-4 float-right">Staff Login</NavLink>
+                </>
+              )
+            }
+
         </div>
       </div>
     </nav>
