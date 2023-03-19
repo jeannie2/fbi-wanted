@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom'
 // ok to naviate from cimponent? solution example was bc didnt use component, all code was in page
 
 function CompToRender(data) {
+  console.log(`comptorender data:${data}`)
   const navigate = useNavigate()
 
   return (
@@ -21,7 +22,7 @@ function CompToRender(data) {
                   alt="gallery"
                   data-id={criminal.uid}
                   onClick={() => navigate(`/show/${criminal.uid}`)}
-                  className="block h-full w-full rounded-lg object-cover object-center"
+                  className="block h-full w-full rounded-lg object-cover object-center hover:grayscale"
                   src={criminal.images[0].thumb}
                 />
                 <figcaption className="text-center bg-black text-white p-1">{criminal.title}</figcaption>

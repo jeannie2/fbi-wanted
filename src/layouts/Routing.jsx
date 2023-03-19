@@ -17,6 +17,10 @@ import AuthRoute from '@/layouts/AuthRoute'
 
 import PagesAuthLogin from '@/pages/auth/Login'
 import PagesAuthSignup from '@/pages/auth/Signup'
+import PagesTipsNew from '@/pages/tips/New'
+// tips index is in my. new is not (public). auth route?for tips index:
+//    <Route path="/my/todos" element={<AuthRoute><PagesMyTodosIndex /></AuthRoute>} />
+//    <Route path="/my/todos/new" element={<AuthRoute><PagesMyTodosNew /></AuthRoute>} />
 // import PagesMyTips from '@/pages/my/tips' // same for all logged in users
 
 /*
@@ -40,6 +44,7 @@ function Routing() {
           <Route path="/search" element={<PagesSearch />} />
           <Route path="/wanted/:subject" element={<PagesIndex />} />
           <Route path="/show/:uid" element={<PagesShow />} />
+          <Route path="/tips/new" element={<PagesTipsNew />} />
 
           <Route path="/auth/login" element={<NoAuthRoute><PagesAuthLogin /></NoAuthRoute>} />
           <Route path="/auth/signup" element={<NoAuthRoute><PagesAuthSignup /></NoAuthRoute>} />

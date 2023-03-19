@@ -29,7 +29,7 @@ function LayoutsNavbar() {
   } */
 
   return (
-    <nav className="flex items-center justify-between flex-wrap p-6 bg-slate-800 text-white">
+    <nav className="flex items-center justify-between flex-wrap p-6 bg-black text-white">
       <div className="block lg:hidden">
         <button
           type="button"
@@ -57,30 +57,30 @@ function LayoutsNavbar() {
       >
         <div className="text-sm lg:flex-grow">
           <div className="flex items-center flex-shrink-0 text-white mr-6">
-            <span className="font-semibold text-xl tracking-tight">FBI Most Wanted</span>
+            <span className="font-semibold text-3xl tracking-tight font-[arial-black] mx-auto">FBI</span>
           </div>
-          <NavLink to="/wanted/topten" className="block mt-4 lg:inline-block lg:mt-0 text-black-200 mr-4">
+          <NavLink to="/wanted/topten" className="block mt-4 lg:inline-block lg:mt-0 text-black-200 mr-4 rounded py-1 px-2">
             Ten Most Wanted
           </NavLink>
-          <NavLink to="/wanted/cei" className="block mt-4 lg:inline-block lg:mt-0 text-black-200 mr-4">
+          <NavLink to="/wanted/cei" className="block mt-4 lg:inline-block lg:mt-0 text-black-200 mr-4 rounded py-1 px-2">
             CEI
           </NavLink>
-          <NavLink to="/wanted/counterintelligence" className="block mt-4 lg:inline-block lg:mt-0 text-black-200 mr-4">
+          <NavLink to="/wanted/counterintelligence" className="block mt-4 lg:inline-block lg:mt-0 text-black-200 mr-4 rounded py-1 px-2">
             Counterintelligence
           </NavLink>
-          <NavLink to="/wanted/cyber" className="block mt-4 lg:inline-block lg:mt-0 text-black-200 mr-4">
+          <NavLink to="/wanted/cyber" className="block mt-4 lg:inline-block lg:mt-0 text-black-200 mr-4 rounded py-1 px-2">
             Cyber
           </NavLink>
-          <NavLink to="/wanted/kidnapmissing" className="block mt-4 lg:inline-block lg:mt-0 text-black-200 mr-4">
+          <NavLink to="/wanted/kidnapmissing" className="block mt-4 lg:inline-block lg:mt-0 text-black-200 mr-4 rounded py-1 px-2">
             Kidnappings & Missing Persons
           </NavLink>
-          <NavLink to="/wanted/seekinginfo" className="block mt-4 lg:inline-block lg:mt-0 text-black-200 mr-4">
+          <NavLink to="/wanted/seekinginfo" className="block mt-4 lg:inline-block lg:mt-0 text-black-200 mr-4 rounded py-1 px-2">
             Seeking Information
           </NavLink>
-          <NavLink to="/wanted/vicap" className="block mt-4 lg:inline-block lg:mt-0 text-black-200 mr-4">
+          <NavLink to="/wanted/vicap" className="block mt-4 lg:inline-block lg:mt-0 text-black-200 mr-4 rounded py-1 px-2">
             ViCAP
           </NavLink>
-          <NavLink to="/wanted/additional" className="block mt-4 lg:inline-block lg:mt-0 text-black-200 mr-4">
+          <NavLink to="/wanted/additional" className="block mt-4 lg:inline-block lg:mt-0 text-black-200 mr-4 rounded py-1 px-2">
             Additional violent crimes
           </NavLink>
           <button type="button" onClick={() => navigate('search')} className="float-right absolute bg-blue-500 hover:bg-blue-700 text-white font-bold block mt-4 lg:inline-block lg:mt-0 text-black-200 mr-4 px-1 border border-blue-700 rounded"><i className="fa fa-search" /> Search</button>
