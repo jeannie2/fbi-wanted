@@ -32,20 +32,4 @@ function CompToRender(data) {
 
 export default CompToRender
 
-// ok to naviate from cimponent? solution example was bc didnt use component, all code was in page
-/* return (
-    <div className="text-center">
-      <Spinner animation="border" />
-    </div>
-  ) */
-// console.log(data)
-// console.log(data.data[0].title) // works. not data.index or data[0]
-/* return (
-  // <p>{data.data[0].title}</p> //works
-    data.data.map((item) => (
-      <tr key={item.title}>
-        <td>{item.title}</td>
-      </tr>
-    ))
-
-  ) */
+// ok to navigate from component? solution example was bc didnt use component, all code was in page

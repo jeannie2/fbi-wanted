@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 // need "key or data-key for first div?"
 function CompToRender2(data) {
-  // console.log(data)
+  console.log(data)
   return (
     <section>
       <div id="CompToRender2" className="max-w-sm lg:max-w-4xl lg:flex mx-auto text-white translate-y-12">
@@ -16,47 +16,47 @@ function CompToRender2(data) {
             <div className="glow font-bold text-2xl lg:text-4xl mb-2 typing-text">{data.data[0].title}</div>
             <ul>
               {data.data[0].dates_of_birth_used && (<li className="glow my-2 typing-text text-base lg:text-lg"><span className="font-bold">DOB: </span> {data.data[0].dates_of_birth_used[0]} </li>) }
-              {data.data[0].place_of_birth && (<li className="glow my-2 typing-text text-base lg:text-lg"><span className="font-bold">POB: </span>{data.data[0].place_of_birth} </li>) }
-              {data.data[0].sex && (<li className="glow my-2 typing-text text-base lg:text-lg"><span className="font-bold">Sex: </span>{data.data[0].sex} </li>) }
-              {data.data[0].race && (<li className="glow my-2 typing-text text-base lg:text-lg"><span className="font-bold">Race: </span>{data.data[0].race} </li>) }
-              {data.data[0].nationality && (<li className="glow my-2 typing-text text-base lg:text-lg"><span className="font-bold">Nationality: </span>{data.data[0].nationality} </li>) }
+              {data.data[0].place_of_birth !== null ? (<li className="glow my-2 typing-text text-base lg:text-lg"><span className="font-bold">POB: </span>{data.data[0].place_of_birth}</li>) : '' }
+              {data.data[0].sex !== null ? (<li className="glow my-2 typing-text text-base lg:text-lg"><span className="font-bold">Sex: </span>{data.data[0].sex}</li>) : '' }
+              {data.data[0].race !== null ? (<li className="glow my-2 typing-text text-base lg:text-lg"><span className="font-bold">Race: </span>{data.data[0].race}</li>) : '' }
+              {data.data[0].nationality !== null ? (<li className="glow my-2 typing-text text-base lg:text-lg"><span className="font-bold">Nationality: </span>{data.data[0].nationality}</li>) : '' }
               <li className="glow typing-text text-base lg:text-lg"><span className="font-bold ">Field office: </span> {data.data[0].field_offices} </li>
 
-              {data.data[0].remarks && (
+              {data.data[0].remarks !== null ? (
                 <details className="glow duration-300">
                   <summary className="glow bg-inherit px-5 py-3 text-base lg:text-xl cursor-pointer">Remarks</summary>
                   <div className="glow px-5 py-3 border border-cyan-100 text-base font-light">
                     <p>{data.data[0].remarks}</p>
                   </div>
                 </details>
-              ) }
+              ) : '' }
 
-              {data.data[0].details && (
+              {data.data[0].details !== null ? (
                 <details className="glow duration-300">
                   <summary className="glow bg-inherit px-5 py-3 text-base lg:text-xl cursor-pointer">Details</summary>
                   <div className="glow px-5 py-3 border border-cyan-100 text-base font-light">
                     <p>{data.data[0].details}</p>
                   </div>
                 </details>
-              ) }
+              ) : '' }
 
-              {data.data[0].caution && (
+              {data.data[0].caution !== null ? (
                 <details className="glow duration-300">
                   <summary className="glow bg-inherit px-5 py-3 text-base lg:text-xl cursor-pointer ">Caution</summary>
                   <div className="glow px-5 py-3 border border-cyan-100 text-base font-light">
                     <p>{data.data[0].caution}</p>
                   </div>
                 </details>
-              ) }
+              ) : '' }
 
-              {data.data[0].reward_text && (
+              {data.data[0].reward_text !== null ? (
                 <details className="glow duration-300">
                   <summary className="glow bg-inherit px-5 py-3 text-base lg:text-xl cursor-pointer ">Reward</summary>
                   <div className="glow px-5 py-3 border border-cyan-100 text-base font-light">
                     <p>{data.data[0].reward_text}</p>
                   </div>
                 </details>
-              ) }
+              ) : '' }
 
               <div className="glow flex items-center mt-3">
                 <div className="glow text-sm">
@@ -73,6 +73,5 @@ function CompToRender2(data) {
 }
 
 export default CompToRender2
-// jsx {undefined} wont execute
-// original: {data.data[0].race !== null ? (<li className="glow my-2 typing-text text-base lg:text-lg"><span className="font-bold">Race: </span>{data.data[0].race}</li>) : '' }
+
 // https://codebeautify.org/html-stripper

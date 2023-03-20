@@ -15,7 +15,7 @@ function PagesJson() {
 
 export default PagesJson
 
-function PagesWantedIndexO() {
+function PagesWantedIndex() {
   const navigate = useNavigate()
   const { data, error, isLoading } = useTodos()
 

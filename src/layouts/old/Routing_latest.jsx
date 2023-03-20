@@ -25,15 +25,10 @@ import PagesTipsSubmitted from '@/pages/tips/Submitted'
 
 import PagesAdminTipsIndex from '@/pages/admin/tips/Index'
 import PagesAdminTipsShow from '@/pages/admin/tips/Show'
-// tips index is in my. new is not (public). auth route?for tips index:
-//    <Route path="/my/todos" element={<AuthRoute><PagesMyTodosIndex /></AuthRoute>} />
-//    <Route path="/my/todos/new" element={<AuthRoute><PagesMyTodosNew /></AuthRoute>} />
-// import PagesMyTips from '@/pages/my/tips' // same for all logged in users
-//   <Route index element={<Navigate to="/wanted/topten" replace />} />
-//   <Route path="/" index element={<Home />}/>
 
 // <Route index element={<Navigate to="/wanted/topten" replace />} />
-//
+// <Route path="/" index element={<Home />}/>
+// <Route index element={<Navigate to="/wanted/topten" replace />} />
 function Routing() {
   return (
     <BrowserRouter>
@@ -64,15 +59,5 @@ function Routing() {
 
 export default Routing
 
-//           <Route path="/my/tips" element={<AuthRoute><PagesMyTips /></AuthRoute>} />
-/*
-<Route path="/topten" element={<PagesTopTen />} />
-<Route path="/cei" element={<PagesCEI />} />
-          <Route path="/counterintelligence" element={<PagesCounterintelligence />} />
-
-          <Route path="/cyber" element={<PagesCyber />} />
-          <Route path="/kidnapmissing" element={<PagesKidnapMissing />} />
-          <Route path="/seekinginfo" element={<PagesSeekingInfo />} />
-
-          <Route path="/vicap" element={<PagesViCAP />} />
-          <Route path="/additional" element={<PagesAdditional />} /> */
+// tips index is in my. new is not (public). auth route?for tips index:
+// import PagesMyTips from '@/pages/my/tips' // same for all logged in users

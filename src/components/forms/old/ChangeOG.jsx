@@ -1,10 +1,11 @@
 import React from 'react'
-import { Formik, Field, Form, ErrorMessage } from 'formik'
+import { Formik, Field, Form, ErrorMessage } from 'formik' // FieldArray,
 import * as yup from 'yup'
 
 const initialValues = {
   title: '',
   description: ''
+  // TipItems: []
 }
 
 function FormsTipsChange(props) {
@@ -17,6 +18,10 @@ function FormsTipsChange(props) {
         yup.object({
           criminalName: yup.string().required(), // .label('Title'),
           description: yup.string().required() // .label('Info')
+          /* TodoItems: yup.array().of(yup.object({
+            name: yup.string().required().label('Name'),
+            checked: yup.boolean()
+          })) */
         })
       }
     >

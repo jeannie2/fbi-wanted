@@ -1,14 +1,32 @@
 import React, { useState } from 'react'
-import { useNavigate, NavLink } from 'react-router-dom'
-// import { NavLink } from 'react-router-dom' // Link
+/* import Navbar from 'react-bootstrap/Navbar'
+import Container from 'react-bootstrap/Container'
+import Nav from 'react-bootstrap/Nav'
+*/
+import { useNavigate } from 'react-router-dom'
+import { NavLink } from 'react-router-dom' // Link
 
 import useAuth from '@/hooks/useAuth'
+
+// import useUid from '@/hooks/useUid'
 
 function LayoutsNavbar() {
   const { data, apiLogout } = useAuth()
 
   const navigate = useNavigate()
   const [isOpen, setIsOpen] = useState(false)
+
+  // #111126
+  /* const handleFilterSubmit = (e) => {
+    console.log(e.target.value)
+    // find uid from name
+    // const uid = useUid(e.target.value)
+    // navigate(`/index/cyber/${e.target.value}`)
+    navigate(`/show/${e.target.value}`)
+    //
+    // display 1 result with e.target.value
+    //
+  } */
 
   return (
     <nav className="flex items-center justify-between flex-wrap p-6 bg-black text-white font-[arial]">
@@ -66,7 +84,7 @@ function LayoutsNavbar() {
           {
               data ? (
                 <>
-                  <NavLink id="navMyTips" to="/admin/tips" className="block mt-4 lg:inline-block lg:mt-0 text-black-200 mr-4 float-right rounded px-1">Tips</NavLink>
+                  <NavLink id="navMyTips" to="/admin/tips" className="block mt-4 lg:inline-block lg:mt-0 text-black-200 mr-4 float-right rounded px-1">My Tips</NavLink>
                   <NavLink id="navLogout" onClick={apiLogout} className="block mt-4 lg:inline-block lg:mt-0 text-black-200 mr-4 float-right rounded px-1">Logout</NavLink>
                 </>
               ) : (
@@ -84,3 +102,32 @@ function LayoutsNavbar() {
 }
 
 export default LayoutsNavbar
+
+/*
+<!--<div className="flex items-center text-center flex-shrink-0 text-white">
+        <p>FBI Most Wanted</p>
+      </div> -->
+
+ <NavLink to="/index/topten" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">Ten Most Wanted</NavLink>
+          <NavLink to="/index/cei" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">CEI</NavLink>
+          <NavLink to="/index/counterintelligence" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">Counterintelligence</NavLink>
+          <NavLink to="/index/cyber" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">Cyber</NavLink>
+          <NavLink to="/index/kidnapmissing" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">Kidnappings & Missing Persons</NavLink>
+          <NavLink to="/index/seekinginfo" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">Seeking Information</NavLink>
+          <NavLink to="/index/vicap" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">ViCAP</NavLink>
+          <NavLink to="/index/additional" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">Additional violent crimes</NavLink>
+
+          */
+// why not   <NavLink to="/index/:topten"
+/*  <NavLink href="/index/:additional" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">Additional violent crimes</NavLink>
+
+          <a href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+            Docs
+          </a>
+          <a href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+            Examples
+          </a>
+          <a href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+            Blog
+          </a>
+          */

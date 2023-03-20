@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react' // , { useState }
+// import data from '@/list.json'
 import * as data from '@/criminals.json'
 import { useNavigate } from 'react-router-dom'
 // doesnt include top 10
@@ -7,16 +8,19 @@ function List(props) {
   const navigate = useNavigate()
 
   // create a new array by filtering the original array
+  // const result = criminals.items.filter((criminal) => criminal.uid === uid)
   const filteredData = data.items.filter((el) => {
+    // if no input the return the original
     if (props.input === '') {
       return el
     }
-    // return item which contains user input
+    // return the item which contains the user input
     // console.log(el)
     return el.title.toLowerCase().includes(props.input)
   })
 
   return (
+  // <ul>
     <section id="search-section" className="overflow-hidden text-neutral-700">
       <div className="container mx-auto px-5 py-2 lg:px-32 lg:pt-12">
         <div className="-m-1 flex flex-wrap md:-m-2">
@@ -39,6 +43,7 @@ function List(props) {
         </div>
       </div>
     </section>
+  // </ul>
   )
 }
 

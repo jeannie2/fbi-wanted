@@ -1,12 +1,11 @@
 // @import "~bootstrap/scss/bootstrap";
-//@import "~react-toastify/dist/ReactToastify";
+@import '~react-toastify/dist/ReactToastify.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  background-color: rgb(3, 8, 30);
-
+  background-color: black; // rgb(3, 8, 30);
 }
 
 @keyframes typing {
@@ -19,50 +18,55 @@ body {
   }
 }
 
-@keyframes blink {
-  50% {
-    border-color: transparent
-  }
-}
-
 .typing-text {
   overflow: hidden;
+  white-space: nowrap;
   animation: typing 1.3s steps(30, end);
-  white-space:nowrap;
   animation-fill-mode: forwards;
   /* border-right: .15em solid orange; */
 }
 
 #CompToRender2, #searchText, #login-text, #register-text {
-  // font-family: 'Orbitron', sans-serif;
-  // font-family: 'Aldrich', sans-serif;
   font-family: 'Share Tech Mono', monospace;
 
 }
 
 .active {
-  border: 0.5px solid grey;
-  background:  rgba(23, 47, 170, 0.5);
+  border: 0.5px solid lightblue;
+  background: blue; // rgba(23, 47, 170, 0.5);
   color: white;
 }
 
-section {
-  box-shadow: inset 0 0 20px blue;
+#navMyTips, #navLogout {
+  border: none;
+  background: none;
 }
+
+#navMyTips:hover, #navLogout:hover {
+  border: 0.5px solid lightblue; // or else issue with selected, eg 2 buttons blue at once
+  background: blue;
+}
+
 
 .glow {
- /* box-shadow: inset 0 0 20px blue; */
-}
-
-.glow2 {
-  box-shadow: 0 0 20px blue;
-}
-
-#CompToRender2 {
-  font-family: 'DotGothic16', sans-serif;
-  font-family: 'Share Tech Mono', monospace;
+  // box-shadow: inset 0 0 5px white; // 20px blue;
+  border-radius: 5px;
 }
 
 #search-section {
   box-shadow: none;
 }
+
+/*
+font-family: 'Orbitron', sans-serif;
+font-family: 'Aldrich', sans-serif;
+
+    section {
+  box-shadow: inset 0 0 20px blue;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+} */

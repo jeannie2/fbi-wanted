@@ -2,11 +2,11 @@ import React from 'react'
 import { useParams, Link } from 'react-router-dom'
 
 import Loading from '@/components/Loading'
-import useMyTip from '@/hooks/useMyTip'
+import useAdminTip from '@/hooks/useAdminTip'
 
-function PagesMyTipsShow() {
+function PagesAdminTipsShow() {
   const { id } = useParams()
-  const { data, error, isLoading } = useMyTip(id)
+  const { data, error, isLoading } = useAdminTip(id)
 
   if (isLoading) return <Loading />
   if (error) return <div>There was an error fetching data</div>
@@ -24,4 +24,4 @@ function PagesMyTipsShow() {
   )
 }
 
-export default PagesMyTipsShow
+export default PagesAdminTipsShow

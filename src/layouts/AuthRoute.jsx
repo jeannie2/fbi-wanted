@@ -8,7 +8,7 @@ function AuthRoute({ children }) {
   const { data, isLoading, isValidating } = useAuth()
 
   if (isLoading || isValidating) return null
-  if (!data?.user) {
+  if (!data) {
     toast.warning('You need to login first!')
     return <Navigate to="/auth/login" />
   }

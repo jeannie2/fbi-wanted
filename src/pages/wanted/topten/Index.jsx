@@ -16,7 +16,8 @@ const keyToSubject = {
 
 function PagesTopTen() {
   const subject = window.location.href.split('/').reverse()[0] // not useParams(). not const {subject}
-  const data = useTopTen(keyToSubject[subject]) // const data = useTopTen('Ten Most Wanted Fugitives')
+  // const data = useTopTen(keyToSubject[subject]) //
+  const data = useTopTen('Ten Most Wanted Fugitives')
   console.log('IN THE TOPTEN')
 
   return <CompToRender data={data} /> // same comp regardless

@@ -1,9 +1,9 @@
 import React from 'react'
-
 import FormsTipsChange from '@/components/forms/tips/Change'
 import useTips from '@/hooks/useTips'
 
-/// console.log('TIPS')
+export const noAuthRedirect = '/admin/tips'
+
 function PagesTipsNew() {
   const { apiCreateTip } = useTips()
 

@@ -3,7 +3,6 @@ import { toast } from 'react-toastify'
 
 export const fetcher = (url) => axios.get(url).then((res) => res.data)
 
-// delete below?
 export const handleErrors = (err) => {
   // Console Log for debugging purposes
   if (err.response) {

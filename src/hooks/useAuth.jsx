@@ -6,7 +6,10 @@ import { fetcher, handleErrors } from '@/hooks/_utils'
 
 const useAuth = () => {
   const navigate = useNavigate()
-  const { data, error, isLoading, isValidating, mutate } = useSWR(`${process.env.API_URL}/api/my/profile`, fetcher)
+  const { data, error, isLoading, isValidating, mutate } = useSWR(`${process.env.API_URL}/api/my/profile`, fetcher, {
+    revalidateOnFocus: false,
+    shouldRetryOnError: false
+  })
 
   const apiSignup = (user) => axios({
     method: 'POST',
@@ -14,7 +17,7 @@ const useAuth = () => {
     data: user
   }).then(() => {
     mutate()
-    navigate('/my/tips')
+    navigate('/admin/tips')
   }).catch(handleErrors)
 
   const apiLogin = (user) => axios({
@@ -23,7 +26,7 @@ const useAuth = () => {
     data: user
   }).then(() => {
     mutate()
-    navigate('/my/tips')
+    navigate('/admin/tips')
   }).catch(handleErrors)
 
   const apiLogout = () => axios({
