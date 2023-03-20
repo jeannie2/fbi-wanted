@@ -4,7 +4,7 @@ import { Routes, BrowserRouter, Route } from 'react-router-dom'
 import App from '@/layouts/App'
 
 import PagesHome from '@/pages/Home'
-import PagesAnother from '@/pages/Another'
+import PagesAnother from '@/pages/Old/Another'
 import PagesNotFound from '@/pages/NotFound'
 
 import PagesIndex from '@/pages/wanted/Index'
@@ -17,21 +17,15 @@ import AuthRoute from '@/layouts/AuthRoute'
 
 import PagesAuthLogin from '@/pages/auth/Login'
 import PagesAuthSignup from '@/pages/auth/Signup'
-import PagesTipsNew from '@/pages/tips/New'
+import PagesTipsNew from '@/pages/tips/New/New'
+import PagesTipsSubmitted from '@/pages/tips/New/Submitted'
+
+import PagesMyTipsShow from '@/pages/my/tips/Show'
+import PagesMyTipsIndex from '@/pages/my/tips/Index'
 // tips index is in my. new is not (public). auth route?for tips index:
 //    <Route path="/my/todos" element={<AuthRoute><PagesMyTodosIndex /></AuthRoute>} />
 //    <Route path="/my/todos/new" element={<AuthRoute><PagesMyTodosNew /></AuthRoute>} />
 // import PagesMyTips from '@/pages/my/tips' // same for all logged in users
-
-/*
-import PagesCyber from '@/pages/Cyber'
-import PagesCounterintelligence from '@/pages/Counterintelligence'
-import PagesViCAP from '@/pages/ViCAP'
-import PagesTopTen from '@/pages/TopTen'
-import PagesAdditional from '@/pages/Additional'
-import PagesCEI from '@/pages/CEI'
-import PagesKidnapMissing from '@/pages/KidnapMissing'
-import PagesSeekingInfo from '@/pages/SeekingInfo' */
 
 function Routing() {
   return (
@@ -44,7 +38,12 @@ function Routing() {
           <Route path="/search" element={<PagesSearch />} />
           <Route path="/wanted/:subject" element={<PagesIndex />} />
           <Route path="/show/:uid" element={<PagesShow />} />
-          <Route path="/tips/new" element={<PagesTipsNew />} />
+
+          <Route path="/tips/new" element={<NoAuthRoute><PagesTipsNew /> </NoAuthRoute>} />
+          <Route path="/tips/new/submitted" element={<NoAuthRoute><PagesTipsSubmitted /></NoAuthRoute>} />
+
+          <Route path="/my/tips" element={<AuthRoute><PagesMyTipsIndex /></AuthRoute>} />
+          <Route path="/my/tips/:id" element={<AuthRoute><PagesMyTipsShow /></AuthRoute>} />
 
           <Route path="/auth/login" element={<NoAuthRoute><PagesAuthLogin /></NoAuthRoute>} />
           <Route path="/auth/signup" element={<NoAuthRoute><PagesAuthSignup /></NoAuthRoute>} />

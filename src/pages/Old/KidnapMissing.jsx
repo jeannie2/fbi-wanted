@@ -1,6 +1,6 @@
 import React from 'react'
 // import useCriminals from '@/hooks/useCriminals'
-import useKidnapMissing from '@/hooks/useKidnapMissing'
+import useKidnapMissing from '@/hooks/old/useKidnapMissing'
 
 function PagesKidnapMissing() {
   const data = useKidnapMissing()

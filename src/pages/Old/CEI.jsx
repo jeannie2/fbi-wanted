@@ -1,6 +1,6 @@
 import React from 'react'
 // import useCriminals from '@/hooks/useCriminals'
-import useCEI from '@/hooks/useCEI'
+import useCEI from '@/hooks/old/useCEI'
 
 function PagesCEI() {
   const data = useCEI()

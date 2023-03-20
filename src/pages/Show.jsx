@@ -16,7 +16,8 @@ function PagesShow() {
   return (
     <CompToRender2 data={data} />
   )
-  //     <p>{id}</p>
+
+  // <p>{id}</p>
   // return <CompToRender2 data={data} /> // same comp regardless
   // const CompTo
   //  const data = useKidnapMissing()

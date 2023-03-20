@@ -7,7 +7,7 @@ function PagesHome() {
     <div id="pages-home" className="container">
       <header className="text-center border-bottom">
         <h1>FBI Most Wanted</h1>
-        <div><Link to="/another">Enter</Link></div>
+        <div><Link to="/wanted/topten">Enter</Link></div>
         <div><Link to="/wanted/index">Here</Link></div>
 
       </header>
@@ -17,6 +17,7 @@ function PagesHome() {
 
 export default PagesHome/* import React from 'react'
 
+//   <div><Link to="/another">Enter</Link></div>
 import Loading from '@/components/Loading'
 import useCoinbase from '@/hooks/useCoinbase'
 

@@ -15,8 +15,6 @@ const keyToSubject = {
   seekinginfo: 'Seeking Information',
   additional: 'Additional Violent Crimes',
   cei: 'Criminal Enterprise Investigations'
-// "vicap", "ViCAP",
-// "topten", "Top T"
 }
 
 function PagesIndex() {

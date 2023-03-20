@@ -1,7 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 
-import useTodo from '@/hooks/useTodo'
+import useTodo from '@/hooks/old/useTodo'
 
 import Loading from '@/components/Loading'
 

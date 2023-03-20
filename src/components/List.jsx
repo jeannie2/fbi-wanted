@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react' // , { useState }
 // import data from '@/list.json'
 import * as data from '@/criminals.json'
 import { useNavigate } from 'react-router-dom'

@@ -9,5 +9,3 @@ const useTopTen = (filter) => {
 }
 
 export default useTopTen
-
-// goal: topten, vicap, card, implement search bar

@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
 */
 import { useNavigate } from 'react-router-dom'
-import { NavLink, Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom' // Link
 
 import useAuth from '@/hooks/useAuth'
 
@@ -29,7 +29,7 @@ function LayoutsNavbar() {
   } */
 
   return (
-    <nav className="flex items-center justify-between flex-wrap p-6 bg-black text-white">
+    <nav className="flex items-center justify-between flex-wrap p-6 bg-black text-white font-[arial]">
       <div className="block lg:hidden">
         <button
           type="button"
@@ -76,9 +76,6 @@ function LayoutsNavbar() {
           </NavLink>
           <NavLink to="/wanted/seekinginfo" className="block mt-4 lg:inline-block lg:mt-0 text-black-200 mr-4 rounded py-1 px-2">
             Seeking Information
-          </NavLink>
-          <NavLink to="/wanted/vicap" className="block mt-4 lg:inline-block lg:mt-0 text-black-200 mr-4 rounded py-1 px-2">
-            ViCAP
           </NavLink>
           <NavLink to="/wanted/additional" className="block mt-4 lg:inline-block lg:mt-0 text-black-200 mr-4 rounded py-1 px-2">
             Additional violent crimes

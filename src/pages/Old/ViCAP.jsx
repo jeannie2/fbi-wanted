@@ -1,6 +1,6 @@
 import React from 'react'
 // import useCriminals from '@/hooks/useCriminals'
-import useViCAP from '@/hooks/useViCAP'
+import useViCAP from '@/hooks/old/useViCAP'
 
 function PagesViCAP() {
   const data = useViCAP()

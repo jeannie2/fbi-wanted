@@ -4,7 +4,7 @@ import { Routes, BrowserRouter, Route } from 'react-router-dom'
 import App from '@/layouts/App'
 
 import PagesHome from '@/pages/Home'
-import PagesAnother from '@/pages/Another'
+import PagesAnother from '@/pages/Old/Another'
 import PagesNotFound from '@/pages/NotFound'
 
 import PagesIndex from '@/pages/wanted/Index'

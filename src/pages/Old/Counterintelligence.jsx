@@ -1,6 +1,6 @@
 import React from 'react'
 // import useCriminals from '@/hooks/useCriminals'
-import useCounterintelligence from '@/hooks/useCounterintelligence'
+import useCounterintelligence from '@/hooks/old/useCounterintelligence'
 
 function PagesCounterintelligence() {
   const data = useCounterintelligence()

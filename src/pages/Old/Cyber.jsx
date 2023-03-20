@@ -1,6 +1,6 @@
 import React from 'react'
 // import useCriminals from '@/hooks/useCriminals'
-import useCyber from '@/hooks/useCyber'
+import useCyber from '@/hooks/old/useCyber'
 
 function PagesCyber() {
   const data = useCyber()

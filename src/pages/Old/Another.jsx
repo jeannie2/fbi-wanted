@@ -19,13 +19,13 @@ import React from 'react'
 
 // import useTodos from '@/hooks/useTodos'
 // import Loading from '@/components/Loading'
-import useCriminals from '@/hooks/useCriminals'
+// import useCriminals from '@/hooks/useCriminals'
 import * as criminals from '@/criminals.json'
 
 function PagesJson() {
   // const what = criminals
 
-  const data = useCriminals()
+  // const data = useCriminals()
 
   return (
 
