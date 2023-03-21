@@ -2,7 +2,7 @@ import React from 'react'
 import { Outlet } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
 
-import LayoutsNavbar from '@/layouts/old/Navbar__v3'
+import LayoutsNavbar from '@/layouts/Navbar'
 
 function App() {
   return (
