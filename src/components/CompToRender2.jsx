@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 // need "key or data-key for first div?"
 function CompToRender2(data) {
   // console.log(data)
+  // data.data[0].images[0].thumb
+  console.log(data)
   return (
     <section>
       <div id="CompToRender2" className="max-w-sm lg:max-w-4xl lg:flex mx-auto text-white translate-y-12">

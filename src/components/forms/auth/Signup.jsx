@@ -28,13 +28,13 @@ function FormsAuthSignup(props) {
             <div className="mb-3">
               <label className="px-5">Email</label>
               <Field
-                className={`form-control ${e?.email && t?.email && 'is-invalid'} text-black pl-1`}
+                className={`form-control ${e?.email && t?.email && 'is-invalid'} text-black pl-1`} // need is-invalid?
                 name="email"
                 type="email"
                 placeholder="adam.chan@gmail.com"
               />
               <ErrorMessage
-                className="invalid-feedback"
+                className="text-red-500"
                 name="email"
                 component="div"
               />
@@ -48,7 +48,7 @@ function FormsAuthSignup(props) {
                 type="password"
               />
               <ErrorMessage
-                className="invalid-feedback"
+                className="text-red-500"
                 name="password"
                 component="div"
               />
@@ -62,7 +62,7 @@ function FormsAuthSignup(props) {
                 type="password"
               />
               <ErrorMessage
-                className="invalid-feedback"
+                className="text-red-500"
                 name="passwordConfirmation"
                 component="div"
               />

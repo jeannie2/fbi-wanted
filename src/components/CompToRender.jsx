@@ -16,7 +16,7 @@ function CompToRender(data) {
                 <img
                   alt="gallery"
                   data-id={criminal.uid}
-                  onClick={() => navigate(`/show/${criminal.uid}`)}
+                  onClick={() => navigate(`/wanted/show/${criminal.uid}`)}
                   className="block h-full w-full rounded-lg object-cover object-center hover:grayscale"
                   src={criminal.images[0].thumb}
                 />

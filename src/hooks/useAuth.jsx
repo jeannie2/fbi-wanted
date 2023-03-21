@@ -16,7 +16,7 @@ const useAuth = () => {
     url: `${process.env.API_URL}/api/auth/signup`,
     data: user
   }).then(() => {
-    mutate()
+    mutate() // switch order: navigate first
     navigate('/admin/tips')
   }).catch(handleErrors)
 
@@ -25,7 +25,7 @@ const useAuth = () => {
     url: `${process.env.API_URL}/api/auth/login`,
     data: user
   }).then(() => {
-    mutate()
+    mutate() // switch order: navigate first
     navigate('/admin/tips')
   }).catch(handleErrors)
 
@@ -35,8 +35,9 @@ const useAuth = () => {
   }).then(() => {
     // force set the data to undefined
     // because just revalidation will not remove cache data
-    mutate(undefined)
+    // switched order to navigate first then navigate
     navigate('/auth/login')
+    mutate(undefined)
   }).catch(handleErrors)
 
   return {

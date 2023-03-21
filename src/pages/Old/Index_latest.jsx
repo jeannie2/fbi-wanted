@@ -1,27 +1,37 @@
 import React from 'react'
-// import { useParams } from 'react-router-dom'
-
-// there is no params unlike index/:cyber.
+import { useParams } from 'react-router-dom'
 
 // import * as topTen from '@/topTen.json'
-import useTopTen from '@/hooks/useTopTen'
-// import useCriminals from '@/hooks/useCriminals'
+// import useTopTen from '@/hooks/useTopTen'
+import useCriminals from '@/hooks/useCriminals'
 // import useKidnapMissing from '@/hooks/useKidnapMissing'
 // CHETANBHAI, ruja, ROSALES, YULAN,alexis, CARDENAS, arnoldo, pratt, VILLARREAL, CARO-QUINTERO
 import CompToRender from '@/components/CompToRender'
 
 const keyToSubject = {
-  topten: 'Ten Most Wanted Fugitives'
+  cyber: "Cyber's Most Wanted",
+  kidnapmissing: 'Kidnappings and Missing Persons',
+  counterintelligence: 'Counterintelligence',
+  seekinginfo: 'Seeking Information',
+  additional: 'Additional Violent Crimes',
+  cei: 'Criminal Enterprise Investigations'
 }
 
-function PagesTopTen() {
-  const subject = window.location.href.split('/').reverse()[0] // not useParams(). not const {subject}
-  const data = useTopTen(keyToSubject[subject]) //
-  // const data = useTopTen('Ten Most Wanted Fugitives')
-  console.log(data)
-  console.log('IN THE TOPTEN')
+function PagesIndex() {
+  const { subject } = useParams()
+
+  const data = useCriminals(keyToSubject[subject])
+  /* if (subject === 'topten') {
+    data = useTopTen(keyToSubject[subject])
+  } */
+  // const data = useCriminals("Cyber's Most Wanted"])
+
+  console.log('IN THE INDEX')
 
   return <CompToRender data={data} /> // same comp regardless
+  // const CompTo
+  //  const data = useKidnapMissing()
+
   // const PagesIndex = () => {
   /* return (
     <section className="overflow-hidden text-neutral-700">
@@ -45,7 +55,7 @@ function PagesTopTen() {
   ) */
 }
 
-export default PagesTopTen
+export default PagesIndex
 
 /*
     <p>{data[0].title}</p>

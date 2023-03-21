@@ -3,12 +3,12 @@ import { Routes, BrowserRouter, Route } from 'react-router-dom'
 
 import App from '@/layouts/App'
 
-import PagesHome from '@/pages/Home'
+import PagesHome from '@/pages/Old/Home'
 import PagesAnother from '@/pages/Old/Another'
 import PagesNotFound from '@/pages/NotFound'
 
 import PagesIndex from '@/pages/wanted/Index'
-import PagesShow from '@/pages/Show'
+import PagesShow from '@/pages/wanted/Show'
 import PagesTopTen from '@/pages/wanted/topten/Index'
 import PagesSearch from '@/pages/Search'
 

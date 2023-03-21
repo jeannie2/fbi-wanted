@@ -3,8 +3,7 @@ import React, { useState } from 'react'
 import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
 */
-import { useNavigate } from 'react-router-dom'
-import { NavLink } from 'react-router-dom' // Link
+import { useNavigate, NavLink } from 'react-router-dom' // Link
 
 import useAuth from '@/hooks/useAuth'
 
