@@ -4,7 +4,7 @@ Website using React and Express and data from external API for FSWDI project 3
 
 ## Technologies
 
-This project was made using HTML, CSS, JavaScript, jQuery, Tailwind CSS, animate.css, Yup, Prisma, Express, PostgreSQL, React
+This project was made using HTML, CSS, JavaScript, jQuery, Tailwind CSS, animate.css, Yup, Prisma, Express, PostgreSQL, React, Formik
 
 ## Install instructions
 

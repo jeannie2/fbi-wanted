@@ -28,7 +28,7 @@ function List(props) {
                 <img
                   alt="gallery"
                   data-id={item.uid}
-                  onClick={() => navigate(`/show/${item.uid}`)}
+                  onClick={() => navigate(`/wanted/show/${item.uid}`)}
                   className="block h-full w-full rounded-lg object-cover object-center"
                   src={item.images[0].thumb}
                 />
