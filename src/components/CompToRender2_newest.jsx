@@ -1,16 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import ImageGallery from '@/components/ImageGallery'
 // need "key or data-key for first div?"
 function CompToRender2(data) {
+  // console.log(data)
+  // data.data[0].images[0].thumb
   console.log(data)
+
   return (
     <section>
       <div id="CompToRender2" className="max-w-sm lg:max-w-4xl lg:flex mx-auto text-white translate-y-12">
         <div className=" h-48 lg:h-auto lg:w-5/12 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden " title="photo">
-          {data.data[0].images.length > 1 ? <ImageGallery data={data.data[0]} /> : <img className="lg:w-[300px] lg:h-[400px] mt-5 mx-auto animate__animated animate__zoomIn" src={data.data[0].images[0].thumb} /> }
-
+          <img className="lg:w-[300px] lg:h-[400px] mt-5 mx-auto animate__animated animate__zoomIn" src={data.data[0].images[0].thumb} />
+          {data.data[0].images.length > 1 ? <ImageGallery data={data} /> : <img className="lg:w-[300px] lg:h-[400px] mt-5 mx-auto animate__animated animate__zoomIn" src={data.data[0].images[0].thumb} /> }
         </div>
 
         <div className="p-4 flex flex-col justify-between leading-normal -m-2 w-full">
@@ -75,8 +77,6 @@ function CompToRender2(data) {
 }
 
 export default CompToRender2
-// <img className="lg:w-[300px] lg:h-[400px] mt-5 mx-auto animate__animated animate__zoomIn" src={data.data[0].images[0].thumb} />
-// <p className="text-white">{data.data[0].images.length}</p>
 // jsx {undefined} wont execute
 // original: {data.data[0].race !== null ? (<li className="glow my-2 typing-text text-base lg:text-lg"><span className="font-bold">Race: </span>{data.data[0].race}</li>) : '' }
 // https://codebeautify.org/html-stripper
