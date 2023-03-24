@@ -61,7 +61,7 @@ function CompToRender2(data) {
               ) }
 
               <div className="glow flex items-center mt-3">
-                <div className="glow text-sm">
+                <div className="text-sm">
                   <Link to="/tips/new" className="leading-none text-base lg:text-lg hover:underline">Submit an anonymous tip online</Link>
                 </div>
               </div>
