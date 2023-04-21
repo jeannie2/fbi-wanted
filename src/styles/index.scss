@@ -8,6 +8,7 @@ body {
   background-color: black; // rgb(3, 8, 30);
 }
 
+/*
 @keyframes typing {
   from {
     width: 0
@@ -23,7 +24,7 @@ body {
   white-space: nowrap;
   animation: typing 1.3s steps(30, end);
   animation-fill-mode: forwards;
-  /* border-right: .15em solid orange; */
+  // border-right: .15em solid orange;
 }
 
 #CompToRender2, #searchText, #login-text, #register-text {
