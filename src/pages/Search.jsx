@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import List from '@/components/List'
+// import List from '@/components/List'
 
 function PagesSearch() {
   const [inputText, setInputText] = useState('')
@@ -22,9 +22,13 @@ function PagesSearch() {
         />
 
       </div>
-      <List input={inputText} />
     </div>
   )
 }
 
 export default PagesSearch
+
+/*
+      </div>
+      <List input={inputText} />
+    </div> */

@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 import axios from 'axios'
 
 import Routing from '@/layouts/Routing'
-import '@/styles/index.scss'
+import '@/styles/styles.scss'
 
 axios.defaults.withCredentials = true
 
