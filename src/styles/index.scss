@@ -1,14 +1,14 @@
-// @import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/bootstrap";
 @import '~react-toastify/dist/ReactToastify.css';
-//@tailwind base;
-//@tailwind components;
-//@tailwind utilities;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
   background-color: black; // rgb(3, 8, 30);
 }
 
-/*
+
 @keyframes typing {
   from {
     width: 0

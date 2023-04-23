@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import ImageGallery from '@/components/ImageGallery'
 // need "key or data-key for first div?"
 function CompToRender2(data) {
-  console.log(data)
+  console.log(data) // eslint-disable-line
   return (
     <section>
       <div id="CompToRender2" className="max-w-sm lg:max-w-4xl lg:flex mx-auto text-white translate-y-12">

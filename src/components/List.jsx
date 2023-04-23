@@ -1,5 +1,5 @@
 import React from 'react'
-import * as data from '@/criminals.json'
+import * as data from '@/criminalsOG.json'
 import { useNavigate } from 'react-router-dom'
 // doesnt include top 10
 
