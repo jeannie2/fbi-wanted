@@ -11,7 +11,7 @@ module.exports = {
   output: {
     publicPath: '/',
     path: path.resolve(__dirname, '../public'),
-    filename: '[name].[hash].js'
+    filename: '[name].[fullhash].js'
   },
   resolve: {
     alias: {
@@ -76,7 +76,7 @@ module.exports = {
       filename: 'index.html'
     }),
     new MiniCssExtractPlugin({
-      filename: '[name]/../style.css'
+      filename: 'styles/styles.[hash].css'
     })
   ]
 }
