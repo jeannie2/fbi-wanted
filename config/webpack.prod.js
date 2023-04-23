@@ -76,7 +76,7 @@ module.exports = {
       filename: 'index.html'
     }),
     new MiniCssExtractPlugin({
-      filename: 'styles/styles.[hash].scss'
+      filename: 'styles/styles.scss'
     })
   ]
 }
