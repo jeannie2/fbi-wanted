@@ -9,7 +9,8 @@ module.exports = {
   ],
   output: {
     publicPath: '/',
-    filename: '[name].[fullhash].js'
+    filename: '[name].[fullhash].js',
+    chunkFilename: '[id].[chunkhash].js'
   },
   resolve: {
     alias: {
