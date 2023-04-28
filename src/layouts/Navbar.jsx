@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom' // useNavigate,
+import { useNavigate, NavLink } from 'react-router-dom'
 // import { NavLink } from 'react-router-dom' // Link
 
 import useAuth from '@/hooks/useAuth'
@@ -7,7 +7,7 @@ import useAuth from '@/hooks/useAuth'
 function LayoutsNavbar() {
   const { data, apiLogout } = useAuth()
 
-  // const navigate = useNavigate()
+  const navigate = useNavigate()
   const [isOpen, setIsOpen] = useState(false)
 
   return (
@@ -62,7 +62,7 @@ function LayoutsNavbar() {
           <NavLink to="/wanted/additional" className="block mt-4 lg:inline-block lg:mt-0 text-black-200 mr-4 rounded py-1 px-2">
             Additional violent crimes
           </NavLink>
-
+          <button type="button" onClick={() => navigate('search')} className="float-right absolute bg-black hover:bg-gray-500 text-white font-bold block mt-5 lg:inline-block lg:mt-0 text-black-200 mr-4 px-2 py-1 rounded"><i className="fa fa-search" /> Search</button>
           {
               data ? (
                 <>
@@ -84,5 +84,3 @@ function LayoutsNavbar() {
 }
 
 export default LayoutsNavbar
-
-/*   <button type="button" onClick={() => navigate('search')} className="float-right border border-white bg-black hover:bg-gray-500 text-white font-bold block mt-5 lg:inline-block lg:mt-0 text-black-200 mr-4 px-2 py-1 rounded"><i className="fa fa-search" /> Search</button> */
