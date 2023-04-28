@@ -12,7 +12,7 @@ function CompToRender(data) {
 
           {data.data.map((criminal) => (
             <div key={criminal.uid} className="flex w-2/4 md:w-1/3 lg:w-1/5 flex-wrap animate__animated animate__fadeIn">
-              <div className="w-full p-1 mb-16 lg:mb-15 md:p-2">
+              <div className="w-full p-1 mb-16 lg:mb-9 md:p-2">
                 <img
                   alt="gallery"
                   data-id={criminal.uid}
